@@ -3,61 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - DarkStream</title>
+    <title>StreamX - Plateforme de Streaming</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barre de navigation -->
     <header>
-        <nav class="navbar">
-            <div class="logo">DarkStream</div>
-            <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Films</a></li>
-                <li><a href="#">Nouveautés</a></li>
+        <div class="logo">StreamX</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#popular">Populaire</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Bannière principale -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Les Ombres du Destin</h1>
-            <p>Un thriller palpitant où chaque choix scelle votre destin.</p>
-            <div class="hero-buttons">
-                <button class="btn play-btn">Lecture</button>
-                <button class="btn info-btn">Plus d'infos</button>
+    <main>
+        <section id="home" class="hero">
+            <h1>Bienvenue sur StreamX</h1>
+            <p>Votre portail pour un streaming immersif et élégant.</p>
+            <button onclick="scrollToSection('categories')">Découvrir maintenant</button>
+        </section>
+        <section id="categories">
+            <h2>Catégories</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="showVideos('action')">
+                    <div class="category-overlay"></div>
+                    <h3>Action</h3>
+                </div>
+                <div class="category-card" onclick="showVideos('comedy')">
+                    <div class="category-overlay"></div>
+                    <h3>Comédie</h3>
+                </div>
+                <div class="category-card" onclick="showVideos('drama')">
+                    <div class="category-overlay"></div>
+                    <h3>Drame</h3>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sections de contenu -->
-    <section class="content-section">
-        <h2>Tendances actuelles</h2>
-        <div class="carousel">
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76ff?q=80&w=1925&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a70785ea291d?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=1920&auto=format&fit=crop');"></div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <h2>Recommandé pour vous</h2>
-        <div class="carousel">
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76ff?q=80&w=1925&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a70785ea291d?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1920&auto=format&fit=crop');"></div>
-            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=1920&auto=format&fit=crop');"></div>
-        </div>
-    </section>
-
+        </section>
+        <section id="popular">
+            <h2>Vidéos Populaires</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Clip Surprise</h3>
+                        <p>Une vidéo culte à ne pas manquer.</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/3tmd-ClzJzs" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Bande-annonce</h3>
+                        <p>Action et suspense garantis.</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Clip Musical</h3>
+                        <p>Un hit qui reste dans la tête.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>© 2025 DarkStream. Tous droits réservés.</p>
+        <p>© 2025 StreamX - Projet Scolaire | Conçu avec soin</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
