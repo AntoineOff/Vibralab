@@ -1,69 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Connexion / Inscription</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Accueil - DarkStream</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">MonSiteWeb</h1>
-        <nav>
-            <a href="#" class="text-blue-500 hover:underline">Accueil</a>
-            <a href="#" class="ml-4 text-blue-500 hover:underline">Contact</a>
+<body>
+    <!-- Barre de navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">DarkStream</div>
+            <ul class="nav-links">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Films</a></li>
+                <li><a href="#">Nouveautés</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="flex-1 flex items-center justify-center">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <div class="flex justify-around mb-6">
-                <button id="loginTab" class="px-4 py-2 border-b-2 border-blue-500">Connexion</button>
-                <button id="registerTab" class="px-4 py-2 border-b-2">Inscription</button>
+    <!-- Bannière principale -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Les Ombres du Destin</h1>
+            <p>Un thriller palpitant où chaque choix scelle votre destin.</p>
+            <div class="hero-buttons">
+                <button class="btn play-btn">Lecture</button>
+                <button class="btn info-btn">Plus d'infos</button>
             </div>
-            <!-- Login Form -->
-            <form id="loginForm" class="space-y-4">
-                <input type="email" placeholder="Email" class="w-full p-2 border rounded">
-                <input type="password" placeholder="Mot de passe" class="w-full p-2 border rounded">
-                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Se connecter</button>
-            </form>
-            <!-- Register Form -->
-            <form id="registerForm" class="space-y-4 hidden">
-                <input type="text" placeholder="Nom" class="w-full p-2 border rounded">
-                <input type="email" placeholder="Email" class="w-full p-2 border rounded">
-                <input type="password" placeholder="Mot de passe" class="w-full p-2 border rounded">
-                <button type="submit" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">S'inscrire</button>
-            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white p-4 text-center shadow-md">
-        <p>&copy; 2024 MonSiteWeb. Tous droits réservés.</p>
+    <!-- Sections de contenu -->
+    <section class="content-section">
+        <h2>Tendances actuelles</h2>
+        <div class="carousel">
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76ff?q=80&w=1925&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a70785ea291d?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=1920&auto=format&fit=crop');"></div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Recommandé pour vous</h2>
+        <div class="carousel">
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1536440136628-849c177e76ff?q=80&w=1925&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a70785ea291d?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&w=1920&auto=format&fit=crop');"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 DarkStream. Tous droits réservés.</p>
     </footer>
-
-    <!-- Script for toggling forms -->
-    <script>
-        const loginTab = document.getElementById('loginTab');
-        const registerTab = document.getElementById('registerTab');
-        const loginForm = document.getElementById('loginForm');
-        const registerForm = document.getElementById('registerForm');
-
-        loginTab.addEventListener('click', () => {
-            loginForm.classList.remove('hidden');
-            registerForm.classList.add('hidden');
-            loginTab.classList.add('border-blue-500');
-            registerTab.classList.remove('border-blue-500');
-        });
-
-        registerTab.addEventListener('click', () => {
-            registerForm.classList.remove('hidden');
-            loginForm.classList.add('hidden');
-            registerTab.classList.add('border-blue-500');
-            loginTab.classList.remove('border-blue-500');
-        });
-    </script>
 </body>
 </html>
